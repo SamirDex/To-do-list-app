@@ -9,7 +9,9 @@ export function Header({  onAddTask }) {
 
     function handleSubmit(e) {
         e.preventDefault(); 
-        onAddTask(title); 
+        if(title != ''){
+            onAddTask(title);
+        } 
         setTitle(''); 
     }
 
